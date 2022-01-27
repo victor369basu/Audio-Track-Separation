@@ -41,7 +41,7 @@ Trains the u-net model on MUSDB18 Dataset and saves the trained model to the pro
 ``` python
 !python main.py --sampling_rate 11025 --test /content/pop.00000.wav --model_save_path ./models/
 ```
-Loads the model from *model_save_path*, reads the audio file from the provided path( --test ) with librosa, process it and use the model to predict the output. In the end, the predictions are visualized by a wave plot and saved to the root directory.
+Loads the model from *model_save_path*, reads the audio file from the provided path( *--test* ) with librosa, process it and use the model to predict the output. In the end, the predictions are visualized by a wave plot and saved to the root directory.
 
 <img align="center" alt="example1" src="./images/ex10.png" style="background-color:white"/><br>
 
