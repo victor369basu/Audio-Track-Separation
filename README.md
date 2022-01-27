@@ -2,6 +2,10 @@
 
 <img align="center" alt="architecture" src="./images/intro.png" style="background-color:white"/><br>
 
+# Introduction
+
+_Audio Source Separation_ is the process of separating a mixture (e.g. a pop band recording) into isolated sounds from individual sources (e.g. just the lead vocals). Basically, splitting a song into separate vocals and instruments.
+
 In this Repository, We developed an audio track separator in tensorflow that successfully separates Vocals and Drums from an input audio song track.
 
 We trained a **U-Net** model with two output layers. One output layer predicts the **Vocals** and the other predicts the **Drums**. The number of Output layers could be increased based on the number of elements one needs to separate from input Audio Track.
@@ -14,11 +18,26 @@ We trained a **U-Net** model with two output layers. One output layer predicts t
 4. Librosa have used for the processing of Audio files.
 5. nussl for Dataset.
 
+# The dataset
+
+We will be using the **MUSDB18** dataset for this tutorial. 
+
+The musdb18 is a dataset of 150 full lengths music tracks (~10h duration) of different genres along with their isolated drums, bass, vocals and others stems.
+
+musdb18 contains two folders, a folder with a training set: "train", composed of 100 songs, and a folder with a test set: "test", composed of 50 songs. Supervised approaches should be trained on the training set and tested on both sets.
+
+All signals are stereophonic and encoded at 44.1kHz.
+
 # Exploratory Data Analysis
 
 <img align="center" alt="eda" src="./images/ex3.png" style="background-color:white"/><br>
 
 <img align="center" alt="resample" src="./images/resample.png" style="background-color:white"/><br>
+
+# Building a Data Loader
+
+In the pipeline we are re-sampling the audio data.
+For the time being our target is to separate the the Vocal and Drums audio from the original, hence the Pipeline returns original processed Audio as **X** and an array of processed Vocals & Drums audio as **y**.
 
 # Unet Architecture
 
