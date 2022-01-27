@@ -41,7 +41,7 @@ class DataGenerator(tf.keras.utils.Sequence):
             np.random.shuffle(self.index)
 
     def load(self, idx):
-        """Load input and target audio."""
+        """Load input and target processed audio."""
         item = self.data[idx]
 
         input = librosa.resample(item['mix'].audio_data[0], 

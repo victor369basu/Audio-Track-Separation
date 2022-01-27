@@ -49,6 +49,11 @@ class AudioTrackSeparation(tf.keras.Model):
         self.mse = tf.keras.losses.MeanSquaredError()
 
     def calculate_loss(self, target, pred):
+        '''
+        We will optimize 2 losses for our mode:
+            1. L1-Loss.
+            2. Mean Squared Error.
+        '''
         l1_loss = tf.reduce_mean(tf.abs(target - pred))
         mse_loss = tf.reduce_mean(tf.reduce_sum(self.mse(target, pred)))
 
@@ -95,6 +100,9 @@ class AudioTrackSeparation(tf.keras.Model):
         }
 
     def build_graph(self):
+        '''
+           To build model graph and plot the model summary.
+        '''
         config = get_parameters()
         x = layers.Input(shape=(config.dim, 1))
         return tf.keras.Model(inputs=[x], outputs=self.call(x))

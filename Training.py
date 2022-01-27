@@ -4,8 +4,12 @@ from Dataset import get_dataset
 from DataLoader import DataGenerator
 from Model.UNetModel import AudioTrackSeparation
 
-def train(model_config, load_model=None):
-
+def train(model_config):
+    '''
+        Args:
+           model_config: Config variable.
+        Returns: Trained model.
+    '''
     musdb_train, musdb_validation = get_dataset()
     train_loader = DataGenerator(
         data=musdb_train,

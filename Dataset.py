@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 
 
 def get_dataset():
+    '''
+       Download the dataset and get the training and validation splits.
+    '''
     # Run this command to download 7-second clips from MUSDB18
     musdb = nussl.datasets.MUSDB18(download=True)
 
@@ -12,6 +15,9 @@ def get_dataset():
     return musdb_train, musdb_validation
 
 def show_sources(dataset, idx):
+    '''
+       Interesting waveplots for given idx from train/ validation dataset. 
+    '''
     item = dataset[idx]
     sources = item['sources']
     if isinstance(sources, list):
