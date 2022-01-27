@@ -16,7 +16,7 @@ def get_dataset():
 
 def show_sources(dataset, idx):
     '''
-       Interesting waveplots for given idx from train/ validation dataset. 
+       Interesting waveplots for given idx from train/validation dataset. 
     '''
     item = dataset[idx]
     sources = item['sources']
