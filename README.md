@@ -49,7 +49,7 @@ Loads the model from *model_save_path*, reads the audio file from the provided p
 
 # Model Performance
 
-<img align="center" alt="vocal loss" src="./images/Vocal loss.png" style="background-color:white"/>
+<img align="center" alt="vocal loss" src="./images/vocal loss.png" style="background-color:white"/>
 
 <img align="center" alt="drum loss" src="./images/Drum loss.png" style="background-color:white"/><br>
 
