@@ -1,6 +1,6 @@
 # Audio-Track Separator
 
-<img align="center" alt="architecture" src="./images/intro.png" style="background-color:white"/><br>
+<img align="center" alt="architecture" src="./images/intro2.png" style="background-color:white"/><br>
 
 In this Repository, We developed an audio track separator in tensorflow that successfully separates Vocals and Drums from an input audio song track.
 
