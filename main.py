@@ -1,11 +1,10 @@
 from Training import train
 from Test import test_model
 from config import get_parameters
-
+from scipy.io.wavfile import write
 import librosa
 import librosa.display
 import matplotlib.pyplot as plt
-
 import numpy as np
 
 
@@ -37,6 +36,7 @@ def main(config):
             librosa.display.waveplot(pred[i][0].squeeze(), sr=config.sampling_rate)
 
         plt.savefig('foo.png')
+        write("output.wav", sr, y)
 
 if __name__ == '__main__':
     config = get_parameters()
